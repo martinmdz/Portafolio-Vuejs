@@ -36,6 +36,7 @@
   --section-gap: 160px;
 }
 
+/*Estilos para modo oscuro*/
 @media (prefers-color-scheme: dark) {
   :root {
     --color-background: var(--vt-c-black);
