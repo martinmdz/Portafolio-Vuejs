@@ -10,7 +10,7 @@
 
 a{
   text-decoration: none;
-  color: var(--vt-c-black);
+  color: var(--vt-c-white);
 }
 
 @media (max-width: 768px) {

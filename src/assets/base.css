@@ -1,72 +1,72 @@
-/* color palette from <https://github.com/vuejs/theme> */
-:root {
-  --vt-c-white: #ffffff;
-  --vt-c-white-soft: #f8f8f8;
-  --vt-c-white-mute: #f2f2f2;
+/* color palette from <https://github.com/vuejs/theme> */ /* Paleta de colores base tomada del tema oficial de Vue */
+:root { /* Define variables CSS globales (personalizables) */
+  --vt-c-white: #ffffff; /* Blanco puro */
+  --vt-c-white-soft: #f8f8f8; /* Blanco suave */
+  --vt-c-white-mute: #f2f2f2; /* Blanco apagado */
 
-  --vt-c-black: #181818;
-  --vt-c-black-soft: #222222;
-  --vt-c-black-mute: #282828;
+  --vt-c-black: #181818; /* Negro base */
+  --vt-c-black-soft: #222222; /* Negro más claro */
+  --vt-c-black-mute: #282828; /* Negro apagado */
 
-  --vt-c-indigo: #2c3e50;
+  --vt-c-indigo: #2c3e50; /* Azul oscuro (índigo) usado como color principal */
 
-  --vt-c-divider-light-1: rgba(60, 60, 60, 0.29);
-  --vt-c-divider-light-2: rgba(60, 60, 60, 0.12);
-  --vt-c-divider-dark-1: rgba(84, 84, 84, 0.65);
-  --vt-c-divider-dark-2: rgba(84, 84, 84, 0.48);
+  --vt-c-divider-light-1: rgba(60, 60, 60, 0.29); /* Línea divisoria clara (más visible) */
+  --vt-c-divider-light-2: rgba(60, 60, 60, 0.12); /* Línea divisoria clara (más sutil) */
+  --vt-c-divider-dark-1: rgba(84, 84, 84, 0.65); /* Línea divisoria oscura (más visible) */
+  --vt-c-divider-dark-2: rgba(84, 84, 84, 0.48); /* Línea divisoria oscura (más sutil) */
 
-  --vt-c-text-light-1: var(--vt-c-indigo);
-  --vt-c-text-light-2: rgba(60, 60, 60, 0.66);
-  --vt-c-text-dark-1: var(--vt-c-white);
-  --vt-c-text-dark-2: rgba(235, 235, 235, 0.64);
+  --vt-c-text-light-1: var(--vt-c-indigo); /* Color principal del texto en modo claro */
+  --vt-c-text-light-2: rgba(60, 60, 60, 0.66); /* Texto secundario en modo claro */
+  --vt-c-text-dark-1: var(--vt-c-white); /* Texto principal en modo oscuro */
+  --vt-c-text-dark-2: rgba(235, 235, 235, 0.64); /* Texto secundario en modo oscuro */
 }
 
-/* semantic color variables for this project */
+/* semantic color variables for this project */ /* Variables semánticas que usarán los colores anteriores */
 :root {
-  --color-background: var(--vt-c-white);
-  --color-background-soft: var(--vt-c-white-soft);
-  --color-background-mute: var(--vt-c-white-mute);
+  --color-background: var(--vt-c-white); /* Fondo base claro */
+  --color-background-soft: var(--vt-c-white-soft); /* Fondo secundario */
+  --color-background-mute: var(--vt-c-white-mute); /* Fondo apagado */
 
-  --color-border: var(--vt-c-divider-light-2);
-  --color-border-hover: var(--vt-c-divider-light-1);
+  --color-border: var(--vt-c-divider-light-2); /* Borde tenue */
+  --color-border-hover: var(--vt-c-divider-light-1); /* Borde al pasar el mouse */
 
-  --color-heading: var(--vt-c-text-light-1);
-  --color-text: var(--vt-c-text-light-1);
+  --color-heading: var(--vt-c-text-light-1); /* Color de los títulos */
+  --color-text: var(--vt-c-text-light-1); /* Color del texto principal */
 
-  --section-gap: 160px;
+  --section-gap: 160px; /* Espacio vertical entre secciones */
 }
 
-/*Estilos para modo oscuro*/
+/*Estilos para modo oscuro*/ /* Cambia las variables cuando el sistema está en modo oscuro */
 @media (prefers-color-scheme: dark) {
   :root {
-    --color-background: var(--vt-c-black);
-    --color-background-soft: var(--vt-c-black-soft);
-    --color-background-mute: var(--vt-c-black-mute);
+    --color-background: var(--vt-c-black); /* Fondo oscuro principal */
+    --color-background-soft: var(--vt-c-black-soft); /* Fondo oscuro secundario */
+    --color-background-mute: var(--vt-c-black-mute); /* Fondo oscuro apagado */
 
-    --color-border: var(--vt-c-divider-dark-2);
-    --color-border-hover: var(--vt-c-divider-dark-1);
+    --color-border: var(--vt-c-divider-dark-2); /* Borde tenue en oscuro */
+    --color-border-hover: var(--vt-c-divider-dark-1); /* Borde al pasar en oscuro */
 
-    --color-heading: var(--vt-c-text-dark-1);
-    --color-text: var(--vt-c-text-dark-2);
+    --color-heading: var(--vt-c-text-dark-1); /* Títulos en claro */
+    --color-text: var(--vt-c-text-dark-2); /* Texto en gris claro */
   }
 }
 
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
-  margin: 0;
-  font-weight: normal;
+  box-sizing: border-box; /* Incluye padding y border en el tamaño total del elemento */
+  margin: 0; /* Elimina márgenes por defecto */
+  font-weight: normal; /* Peso de fuente normal por defecto */
 }
 
 body {
-  min-height: 100vh;
-  color: var(--color-text);
-  background: var(--color-background);
+  min-height: 100vh; /* Altura mínima: toda la ventana */
+  color: var(--color-text); /* Aplica color de texto definido en variables */
+  background: var(--color-background); /* Aplica color de fondo definido en variables */
   transition:
     color 0.5s,
-    background-color 0.5s;
-  line-height: 1.6;
+    background-color 0.5s; /* Transición suave al cambiar tema (claro/oscuro) */
+  line-height: 1.6; /* Altura de línea para mejor legibilidad */
   font-family:
     Inter,
     -apple-system,
@@ -79,9 +79,13 @@ body {
     'Fira Sans',
     'Droid Sans',
     'Helvetica Neue',
-    sans-serif;
-  font-size: 15px;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    sans-serif; /* Fuentes modernas y legibles */
+  font-size: 15px; /* Tamaño base del texto */
+  text-rendering: optimizeLegibility; /* Mejora el renderizado del texto */
+  -webkit-font-smoothing: antialiased; /* Suavizado de fuentes en WebKit */
+  -moz-osx-font-smoothing: grayscale; /* Suavizado de fuentes en macOS */
+}
+
+li {
+  list-style: none; /* Elimina los puntos o numeración de las listas */
 }
