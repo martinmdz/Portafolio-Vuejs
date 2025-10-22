@@ -1,7 +1,8 @@
 <template>
     <nav class="navbar">
         <div class="navbar-menu">
-            <a v-for="nav in navegacion" :key="nav.nombre" href="nav.enlace" class="nav-item">{{ nav.nombre}}</a>
+<!--Se coloco el operador v-bind al atributos href utilizando su minima expresión el operador : / y se soluciono el enlace a las distintas secciones-->
+            <a v-for="nav in navegacion" :key="nav.nombre" :href="nav.enlace" class="nav-item">{{ nav.nombre}}</a>
         </div>
      </nav>
 </template>
