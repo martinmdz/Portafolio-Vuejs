@@ -4,7 +4,7 @@ var misProyectos = ref([]);
 misProyectos.value = ([
      {
     id: 1,
-    src: "/src/assets/restaurant.png",
+    src: "/src/assets/fondo-proyecto1.png",
     titulo: 'Aplicacion de Reservas para Restaurantes (2023)',
     descripcion: 'Creé una aplicación móvil con Fluter que permite a los usuarios reservar mesas en restaurantes locales',
     proyectoLink: 'https:/www.google.com.ar',
@@ -12,7 +12,7 @@ misProyectos.value = ([
   },
     {
     id: 2,
-    src: "/src/assets/e-learning.png",
+    src: "/src/assets/fondo-proyecto1.png",
     titulo: 'Plataforma de E-learning (2022)',
     descripcion: 'Diseñé y desarrollé una platafomra de educación en línea utilizando Django y React, con diferentes funcionalidades',
     proyectoLink: 'https:/www.google.com.ar',
@@ -20,7 +20,7 @@ misProyectos.value = ([
   },
   {
     id: 3,
-    src: "/src/assets/blog.png",
+    src: "/src/assets/fondo-proyecto1.png",
     titulo: 'Blog personal con CMS (2022)',
     descripcion: 'Construí un blog personal con un sistema de gestión de contenidos (CMS)',
     proyectoLink: 'https:/www.google.com.ar',
@@ -28,7 +28,7 @@ misProyectos.value = ([
   },
     {
     id: 4,
-    src: "/src/assets/restaurant.png",
+    src: "/src/assets/fondo-proyecto1.png",
     titulo: 'Aplicacion de Reservas para Restaurantes (2023)',
     descripcion: 'Creé una aplicación móvil con Fluter que permite a los usuarios reservar mesas en restaurantes locales',
     proyectoLink: 'https:/www.google.com.ar',
