@@ -1,7 +1,7 @@
 <script setup>
 import {ref} from 'vue';
-const titulo='Desarrollador Full Stack';
-const fecha='Desde Enero 2022 / Julio 2024';
+const titulo='Mi experiencia';
+const fecha='Desde Enero 2020 / Noviembre 2025';
 const experiencias = ref([
     {id:1, src:'/src/assets/ventas.svg', parrafo: "Lideré un equipo de 5 desarrolladores en la creación de una plataforma de comercio electrónico que incrementó las ventas en un 35% durante el primer año"},
     {id:2, src:'/src/assets/ecommerce.svg', parrafo: 'Diseñé y desarrollé una aplicación web utilizando Node.js, React y MongoDB, logrando reducir el tiempo de carga de las páginas en un 50%'},
@@ -10,7 +10,6 @@ const experiencias = ref([
     {id:5, src:'/src/assets/watch_.svg', parrafo: 'Automaticé procesos de despliegue continuo utilizando Jenkins y Docker, reduciendo los tiempos de despliegue en un 40%.'}
 ]);
 </script>
-
 <template>
   <div class="card">
     <h3 class="titulo">{{ titulo }}</h3>

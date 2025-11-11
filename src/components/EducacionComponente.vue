@@ -5,33 +5,33 @@ const arreglo = ref([
   {
     id: 1,
     fecha: '2025',
-    titulo: 'Certificación DevOps y Full Stack',
-    descripcion: 'Especialización en arquitectura de software, CI/CD, y despliegue con Docker y Kubernetes.',
-    enlace: 'https://ejemplo.com/devops',
+    titulo: 'Técnico en Programación',
+    descripcion: 'Formación integral en desarrollo de software, con énfasis en programación orientada a objetos, estructuras de datos, algoritmos y metodologías ágiles (Scrum). Proyecto final: Sistema de gestión web con Vue.js + Node.js.',
+    enlace: 'https://www.utn.edu.ar',
     accentColor: '#2A9D8F'
   },
   {
     id: 2,
     fecha: '2024',
-    titulo: 'Técnico Universitario en Programación',
-    descripcion: 'Desarrollo avanzado con Vue.js, React, TypeScript y PostgreSQL.',
-    enlace: 'https://ejemplo.com/programacion',
+    titulo: 'Técnico en Administración de Empresas',
+    descripcion: 'Estudio de gestión empresarial, contabilidad, marketing digital, recursos humanos y planificación estratégica. Aplicación práctica en análisis de proyectos y simulación de startups.',
+    enlace: 'https://www.frvm.utn.edu.ar',
     accentColor: '#F4A261'
   },
   {
     id: 3,
     fecha: '2023',
-    titulo: 'Técnico en Desarrollo Back-End',
-    descripcion: 'Dominio de Node.js, Express y MongoDB. Creación de APIs seguras.',
-    enlace: 'https://ejemplo.com/backend',
+    titulo: 'Técnico en Reparación de Celulares',
+    descripcion: 'Capacitación en diagnóstico y reparación de dispositivos móviles (Android/iOS), cambio de pantallas, baterías, conectores, recuperación de datos y uso de herramientas especializadas (multímetro, estación de soldadura).',
+    enlace: 'https://instituto-tecnico-sanrafael.edu.ar',
     accentColor: '#E76F51'
   },
   {
     id: 4,
-    fecha: '2022',
-    titulo: 'Fundamentos de Desarrollo Web',
-    descripcion: 'Primeros pasos con HTML, CSS, JavaScript y diseño responsivo.',
-    enlace: 'https://ejemplo.com/web',
+    fecha: '2019',
+    titulo: 'Técnico en Armado y Reparación de PC',
+    descripcion: 'Formación en ensamblaje de computadoras, instalación de sistemas operativos (Windows/Linux), diagnóstico de fallas de hardware, mantenimiento preventivo y configuración de redes locales.',
+    enlace: 'https://escuela-tecnica-mendoza.edu.ar',
     accentColor: '#264653'
   }
 ])
@@ -79,7 +79,7 @@ h1 {
   text-align: center;
   font-size: 2.2rem;
   font-weight: 700;
-  color: #2c3e50;
+  color: #e1e6eb;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 

@@ -2,11 +2,11 @@
 const title = 'Martín Moreno';
 const descripcion = 'Técnico Universitario en Programación - UTN';
 const residencia = 'San Rafael, Mendoza, Argentina';
-const presentacion = 'Hola, Bienvenido a mi portafolio de proyectos. Soy un desarrollador web con experiencia en el desarrollo de aplicaciones web y móviles.';
+const presentacion = 'Bienvenido/a a mi portafolio de proyectos. Soy un estudiante de programación con gran motivación por el desarrollo de aplicaciones [web/móviles]. Aquí presento mis proyectos más recientes, una muestra de mi aprendizaje constante y la aplicación práctica de mis conocimientos.';
 const redesSociales = [
-  { id: 1, name: 'linkedin', src: '/src/assets/linkedin_.svg', url: 'https://www.linkedin.com/in/jose-perez/' },
+  { id: 1, name: 'linkedin', src: '/src/assets/linkedin_.svg', url: 'https://www.linkedin.com/in/mart%C3%ADn-moreno-olgu%C3%ADn-29821836b/' },
   { id: 2, name: 'instagram', src: '/src/assets/instagram_.svg', url: 'https://www.instagram.com/joseperez/' },
-  { id: 3, name: 'github', src: '/src/assets/github_.svg', url: '' },
+  { id: 3, name: 'github', src: '/src/assets/github_.svg', url: 'https://github.com/martinmdz/' },
   { id: 4, name: 'curriculum', src: '/src/assets/curriculum_.svg', url: '' },
 ];
 const telefono = '+54 9 2604-409428';
@@ -31,56 +31,68 @@ const telefono = '+54 9 2604-409428';
 
 <style scoped>
 .datos-personales {
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 2rem;
-  background: linear-gradient(135deg, #1a2a3a 0%, #0f1424 100%);
+  padding: 3rem 1rem;
+  min-height: 100vh;
+  /* QUITAMOS TODO ESTO: */
+  /* background-image, background-color, ::before, position, z-index */
 }
 
-/* Contenedor más angosto y centrado */
-.contenido {
-  max-width: 500px; /* 🔹 hacelo más o menos angosto cambiando este valor */
+/* EFECTO CRISTAL SUAVE (solo en la tarjeta) */
+.card {
+  max-width: 700px;
   width: 100%;
+  padding: 2.5rem;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  /* box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3); */
+  transition: all 0.4s ease;
 }
 
-/* Título principal (nombre) */
+/* .card:hover {
+  background: rgba(255, 255, 255, 0.12);
+  transform: translateY(-5px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+} */
+
+/* Títulos */
 h1 {
-  font-size: 2.5rem;
+  font-size: 2.8rem;
   font-weight: 700;
-  margin-bottom: 0.5rem;
+  margin: 0 0 0.5rem;
   color: #ffffff;
-  text-shadow: 0 2px 10px rgba(255, 255, 255, 0.1);
-  transition: all 0.4s ease; /* transición suave */
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  transition: all 0.4s ease;
 }
 
-/* Efecto de brillo al pasar el mouse */
 h1:hover {
   color: #64b5f6;
-  text-shadow: 0 0 10px #64b5f6, 0 0 20px #64b5f6, 0 0 30px #64b5f6;
-  transform: scale(1.05);
+  text-shadow: 0 0 15px #64b5f6, 0 0 30px #64b5f6;
+  transform: scale(1.03);
 }
 
-/* Subtítulo */
 h2 {
-  font-size: 1.3rem;
-  font-weight: 500;
-  margin-bottom: 1.5rem;
+  font-size: 1.4rem;
   color: #64b5f6;
-  letter-spacing: 0.5px;
+  margin-bottom: 1.5rem;
+  font-weight: 500;
 }
 
 p {
   font-size: 1.1rem;
-  line-height: 1.7;
-  margin-bottom: 2rem;
+  line-height: 1.8;
   color: #e0e0e0;
+  margin-bottom: 2rem;
 }
 
-/* Íconos */
+/* Redes */
 .container-lista {
   list-style: none;
   padding: 0;
@@ -99,64 +111,54 @@ p {
   height: 50px;
   background: rgba(255, 255, 255, 0.1);
   border-radius: 12px;
-  transition: all 0.3s ease;
   border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
 }
 
 .container-lista a:hover {
   background: rgba(100, 181, 246, 0.2);
   border-color: #64b5f6;
   box-shadow: 0 0 20px rgba(100, 181, 246, 0.3);
+  transform: scale(1.1);
 }
 
-/* Íconos SVG */
 .icon-redsocial {
   width: 28px;
   height: 28px;
+  filter: brightness(0.9);
   transition: filter 0.3s ease;
 }
 
 .container-lista a:hover .icon-redsocial {
-  filter: brightness(0) invert(1) drop-shadow(0 0 5px rgba(100, 181, 246, 0.5));
+  filter: brightness(0) invert(1) drop-shadow(0 0 8px #64b5f6);
 }
 
-/* Subtítulos */
-h3 {
-  font-size: 1.1rem;
-  font-weight: 600;
-  margin-top: 2rem;
-  margin-bottom: 0.5rem;
+h3, h4 {
+  margin: 1rem 0;
   color: #ffffff;
+}
+
+h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   gap: 0.5rem;
 }
 
 h4 {
   font-size: 1rem;
-  font-weight: 400;
-  color: #9e9e9e;
-  margin-top: 0.5rem;
-  text-align: center;
+  color: #bbbbbb;
 }
 
 /* Responsive */
 @media (max-width: 768px) {
-  h1 {
-    font-size: 2rem;
+  .card {
+    padding: 2rem;
+    margin: 1rem;
   }
-
-  h2 {
-    font-size: 1.1rem;
-  }
-
-  p {
-    font-size: 1rem;
-  }
-
-  .container-lista {
-    justify-content: center;
-  }
+  h1 { font-size: 2.2rem; }
+  h2 { font-size: 1.2rem; }
 }
 </style>
