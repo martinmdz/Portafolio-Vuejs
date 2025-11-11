@@ -64,7 +64,6 @@ const arreglo = ref([
 
 .timeline-container {
   --color: rgba(30, 30, 30);
-  /*--bgColor: rgba(245, 245, 245);*/
   min-height: 100vh;
   display: grid;
   align-content: center;
@@ -72,7 +71,7 @@ const arreglo = ref([
   padding: 2rem;
   font-family: "Poppins", sans-serif;
   color: var(--color);
-  /*background: linear-gradient(135deg, #f8f9fa, #e9ecef);*/
+ 
 }
 
 h1 {

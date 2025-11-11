@@ -1,13 +1,18 @@
 <script setup>
+import { ref } from 'vue';
+import img001 from '/src/components/icons/linkedin_.svg';
+import img002 from '/src/components/icons/instagram_.svg';
+import img003 from '/src/components/icons/github_.svg';
+import img004 from '/src/components/icons/curriculum_.svg';
 const title = 'Martín Moreno';
 const descripcion = 'Técnico Universitario en Programación - UTN';
 const residencia = 'San Rafael, Mendoza, Argentina';
 const presentacion = 'Bienvenido/a a mi portafolio de proyectos. Soy un estudiante de programación con gran motivación por el desarrollo de aplicaciones [web/móviles]. Aquí presento mis proyectos más recientes, una muestra de mi aprendizaje constante y la aplicación práctica de mis conocimientos.';
 const redesSociales = [
-  { id: 1, name: 'linkedin', src: '/src/assets/linkedin_.svg', url: 'https://www.linkedin.com/in/mart%C3%ADn-moreno-olgu%C3%ADn-29821836b/' },
-  { id: 2, name: 'instagram', src: '/src/assets/instagram_.svg', url: 'https://www.instagram.com/joseperez/' },
-  { id: 3, name: 'github', src: '/src/assets/github_.svg', url: 'https://github.com/martinmdz/' },
-  { id: 4, name: 'curriculum', src: '/src/assets/curriculum_.svg', url: '' },
+  { id: 1, name: 'linkedin', icono: img001, url: 'https://www.linkedin.com/in/mart%C3%ADn-moreno-olgu%C3%ADn-29821836b/' },
+  { id: 2, name: 'instagram', icono: img002, url: 'https://www.instagram.com/joseperez/' },
+  { id: 3, name: 'github', icono: img003, url: 'https://github.com/martinmdz/' },
+  { id: 4, name: 'curriculum', icono: img004, url: '' },
 ];
 const telefono = '+54 9 2604-409428';
 </script>
@@ -20,7 +25,7 @@ const telefono = '+54 9 2604-409428';
       <p>{{ presentacion }}</p>
       <ul class="container-lista">
         <li v-for="red in redesSociales" :key="red.id">
-          <a :href="red.url"><img class="icon-redsocial" :src="red.src" width="35rem" :alt="red.name"></a>
+          <a :href="red.url"><img class="icon-redsocial" :src="red.icono" width="35rem" :alt="red.name"></a>
         </li>
       </ul>
       <h3>📞 Mi Teléfono personal: {{ telefono }}</h3>
@@ -38,11 +43,10 @@ const telefono = '+54 9 2604-409428';
   text-align: center;
   padding: 3rem 1rem;
   min-height: 100vh;
-  /* QUITAMOS TODO ESTO: */
-  /* background-image, background-color, ::before, position, z-index */
+
 }
 
-/* EFECTO CRISTAL SUAVE (solo en la tarjeta) */
+
 .card {
   max-width: 700px;
   width: 100%;
@@ -52,17 +56,10 @@ const telefono = '+54 9 2604-409428';
   border: 1px solid rgba(255, 255, 255, 0.15);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-  /* box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3); */
   transition: all 0.4s ease;
 }
 
-/* .card:hover {
-  background: rgba(255, 255, 255, 0.12);
-  transform: translateY(-5px);
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
-} */
 
-/* Títulos */
 h1 {
   font-size: 2.8rem;
   font-weight: 700;

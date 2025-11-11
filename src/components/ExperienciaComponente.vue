@@ -1,13 +1,18 @@
 <script setup>
+import img01 from '/src/components/icons/ventas.svg'
+import img02 from '/src/components/icons/ecommerce.svg'
+import img03 from '/src/components/icons/configuracion.svg'
+import img04 from '/src/components/icons/uiux.svg'
+import img05 from '/src/components/icons/watch_.svg'
 import {ref} from 'vue';
 const titulo='Mi experiencia';
 const fecha='Desde Enero 2020 / Noviembre 2025';
 const experiencias = ref([
-    {id:1, src:'/src/assets/ventas.svg', parrafo: "Lideré un equipo de 5 desarrolladores en la creación de una plataforma de comercio electrónico que incrementó las ventas en un 35% durante el primer año"},
-    {id:2, src:'/src/assets/ecommerce.svg', parrafo: 'Diseñé y desarrollé una aplicación web utilizando Node.js, React y MongoDB, logrando reducir el tiempo de carga de las páginas en un 50%'},
-    {id:3, src:'/src/assets/configuracion.svg', parrafo: 'Implementé soluciones de autenticación y autorización, mejorando la seguridad del sitio web y reduciendo los intentos de acceso no autorizado en un 20%.'},
-    {id:4, src:'/src/assets/uiux.svg', parrafo: 'Colaboré con diseñadores de UX/UI para crear interfaces de usuario atractivas y fáciles de usar, aumentando la satisfacción del cliente en un 15%.'},
-    {id:5, src:'/src/assets/watch_.svg', parrafo: 'Automaticé procesos de despliegue continuo utilizando Jenkins y Docker, reduciendo los tiempos de despliegue en un 40%.'}
+    {id:1, icono: img01, parrafo: "Lideré un equipo de 5 desarrolladores en la creación de una plataforma de comercio electrónico que incrementó las ventas en un 35% durante el primer año"},
+    {id:2, icono: img02, parrafo: 'Diseñé y desarrollé una aplicación web utilizando Node.js, React y MongoDB, logrando reducir el tiempo de carga de las páginas en un 50%'},
+    {id:3, icono: img03, parrafo: 'Implementé soluciones de autenticación y autorización, mejorando la seguridad del sitio web y reduciendo los intentos de acceso no autorizado en un 20%.'},
+    {id:4, icono: img04, parrafo: 'Colaboré con diseñadores de UX/UI para crear interfaces de usuario atractivas y fáciles de usar, aumentando la satisfacción del cliente en un 15%.'},
+    {id:5, icono: img05, parrafo: 'Automaticé procesos de despliegue continuo utilizando Jenkins y Docker, reduciendo los tiempos de despliegue en un 40%.'}
 ]);
 </script>
 <template>
@@ -16,7 +21,7 @@ const experiencias = ref([
     <p class="fecha">{{ fecha }}</p>
     <ul class="listado">
       <li class="item" v-for="experiencia in experiencias" :key="experiencia.id">
-        <img class="imagen-svg" :src="experiencia.src" width="45rem" :alt="experiencia.parrafo">
+        <img class="imagen-svg" :src="experiencia.icono" width="45rem" :alt="experiencia.parrafo">
         <p>{{ experiencia.parrafo }}</p>
       </li>
       <!-- <li class="item"><img class="imagen-svg" src="/src/assets/ventas.svg" width="45rem" alt="">
